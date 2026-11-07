@@ -1,4 +1,7 @@
-import qtip_kernels
+try:
+    import qtip_kernels
+except ImportError:  # dense store export only needs the pure PyTorch path
+    qtip_kernels = None
 import torch
 
 kernels = [

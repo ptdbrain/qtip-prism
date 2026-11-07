@@ -1,4 +1,7 @@
-import fast_hadamard_transform
+try:
+    import fast_hadamard_transform
+except ImportError:  # matmul_hadU and matmul_hadUt are pure PyTorch
+    fast_hadamard_transform = None
 import torch
 
 from lib import utils
